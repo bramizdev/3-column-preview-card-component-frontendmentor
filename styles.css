@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+  --color-primary-orange: hsl(31, 77%, 52%);
+  --color-primary-cyan: hsl(184, 100%, 22%);
+  --color-primary-dark-cyan: hsl(179, 100%, 13%);
+  --color-neutral-100: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+  --color-neutral-200: hsl(0, 0%, 95%); /*background, headings, buttons*/
+  --fonts-headings: 'Big Shoulders Display', cursive;
+  --fonts-main: 'Lexend Deca', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: var(--fonts-main);
+}
+
+body {
+  background-color: var(--color-neutral-200);
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.6rem;
+}
+
+@media (min-width: 51.2rem) {
+  main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
+  border-radius: 1rem;
+  transition: ease 0.3s;
+}
+
+@media (min-width: 51.2rem) {
+  .card {
+    flex-direction: row;
+    width: 100%;
+    max-width: 61.33rem;
+  }
+}
+
+#sedans {
+  background-color: var(--color-primary-orange);
+  color: var(--color-primary-orange);
+  border-radius: 1rem 1rem 0 0;
+}
+
+@media (min-width: 51.2rem) {
+  #sedans {
+    border-radius: 1rem 0 0 1rem;
+  }
+}
+
+#suvs {
+  background-color: var(--color-primary-cyan);
+  color: var(--color-primary-cyan);
+}
+
+#luxury {
+  background-color: var(--color-primary-dark-cyan);
+  color: var(--color-primary-dark-cyan);
+  border-radius: 0 0 1rem 1rem;
+}
+
+@media (min-width: 51.2rem) {
+  #luxury {
+    border-radius: 0 1rem 1rem 0;
+  }
+}
+
+.column {
+  padding: 3.2rem 3.33rem 4.3rem 3.33rem;
+}
+
+.column img {
+  margin-bottom: 2.1rem;
+}
+
+.column h3 {
+  color: var(--color-neutral-200);
+  font-family: var(--fonts-headings);
+  text-transform: uppercase;
+  font-size: 2.6rem;
+  margin-bottom: 1.8rem;
+}
+.column p {
+  color: var(--color-neutral-100);
+  line-height: 1.7rem;
+  margin-bottom: 2.4rem;
+}
+
+@media (min-width: 51.2rem) {
+  .column p {
+    margin-bottom: 6.3rem;
+  }
+}
+
+.btn,
+.btn:visited {
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--color-neutral-200);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  margin-bottom: 5rem;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  border: 2px solid var(--color-neutral-200);
+  color: var(--color-neutral-200);
+  background-color: transparent;
+}
+
+.attribution {
+  margin-top: 5rem;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 51.2rem) {
+  .attribution {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.attribution a,
+.attribution a:visited {
+  text-decoration: none;
+  color: var(--color-primary-dark-cyan);
+}
